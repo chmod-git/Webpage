@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/site-icon.png" type="image/gif" sizes="16x16">
+    <script src="https://kit.fontawesome.com/1178c1936b.js" crossorigin="anonymous"></script>
+    <title>Los Pollos Hermanos</title>
+</head>
+<body>
+    <header class="main-header" id="header-image">
+        <div id="header-headings">
+            <h1>Los</h1>
+            <h1>Pollos</h1>
+            <h1>Hermanos</h1>
+        </div>
+    </header>
+    <div class="desktop-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/site-icon.png">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile-nav">
+        <nav class="navbar navbar-dark yellow lighten-1 mb-4">
+            <a href="index.html">
+                <img src="images/site-icon.png" class="mobile-logo">
+            </a>
+            <button class="navbar-toggler second-button" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent23" aria-controls="navbarSupportedContent23" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent23">
+                <ul class="navbar-nav mr-auto">                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Booking</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="container">
+            <h2 class="offer-title">Offer of the Day</h2>
+            <section class="mobile-pizza-menu">
+                <div class="pizza">
+                    <figure>
+                        <img class="pizza-image" src="images/pizzas/sm/mexican.png" alt="Mexican">
+                    </figure>
+                    <div class="pizza-box pizza-box-home">
+                        <div class="mobile-pizza-header">Mexican</div>
+                        <div class="mobile-pizza-ingredients">Red sauce, mozzarella and cheddar cheese, Canadian bacon, smoked bacon, pineapple and jalapeños
+                        </div>
+                        <div class="buttons index-buttons">
+                            <button class="order-button"><a href="menu.html#mexican">Order</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <figure>
+                        <img class="pizza-image" src="images/pizzas/sm/pepperoni.png"
+                            alt="Pepperoni">
+                    </figure>
+                    <div class="pizza-box pizza-box-home">
+                        <div class="mobile-pizza-header">Pepperoni</div>
+                        <div class="mobile-pizza-ingredients"> Red sauce, mozzarella, our traditional pepperoni, and deli pepperoni</div>
+                        <div class="buttons index-buttons">
+                            <button class="order-button"><a href="menu.html#pepperoni">Order</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <figure>
+                        <img class="pizza-image" src="images/pizzas/sm/barbecue_classic.png" alt="Barbecue">
+                    </figure>
+                    <div class="pizza-box pizza-box-home">
+                        <div class="mobile-pizza-header">Barbecue</div>
+                        <div class="mobile-pizza-ingredients">Olive oil and garlic glaze, sausage, Italian sausage, mozzarella, pepperoni, Genoa salami, provolone </div>
+                        <div class="buttons index-buttons">
+                            <button class="order-button"><a href="menu.html#barbecue-pizza">Order</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <figure>
+                        <img class="pizza-image" src="images/pizzas/sm/burger_pizza.png" alt="Burger">
+                    </figure>
+                    <div class="pizza-box pizza-box-home">
+                        <div class="mobile-pizza-header">Burger</div>
+                        <div class="mobile-pizza-ingredients">Barbecue sauce, beef pieces, pickles, tomatoes, sauce 1000 islands </div>
+                        <div class="buttons index-buttons">
+                            <button class="order-button "><a href="menu.html#burger-pizza">Order</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="separator" id="reviews-separator">
+            <div class="separator-text">
+                <h1>Client Reviews</h1>
+            </div>
+        </div>
+        <div class="container">
+            <section class="card-container">
+                <div class="cards"></div>
+            </section>
+        </div>
+    </main>
+    <script src="js/reviews.js" type="module"></script>
+</body>
+</html>

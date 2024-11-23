@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "customer": "Jack",
+      "rating": 5,
+      "text": "I am surprised. I was skeptical at first, but after a friend's recommendation, I visited the restaurant. The pizzas have a unique taste, grilled. I was speechless",
+      "source": "./images/ratings/rating1.jpg"
+    },
+    {
+      "id": 2,
+      "customer": "Veronica",
+      "rating": 4,
+      "text": "I am extremely pleased. Delicious food and pleasant atmosphere. There are plenty of waiters good at what they do, polite and smiling. The chefs are top notch",
+      "source": "./images/ratings/rating2.jpg"
+    },
+    {
+      "id": 3,
+      "customer": "Linda",
+      "rating": 5,
+      "text": "Forget the walk-in pizzerias. This hidden new place is amazing. Wish they did home delivery. I came, I saw, I tried, I appreciated",
+      "source": "./images/ratings/rating3.jpg"
+    },
+    {
+      "id": 4,
+      "customer": "Peter",
+      "rating": 4,
+      "text": "Cozy place. I just found out who the chefs were and immediately visited. It looks like that only use quality products. The staff are exceptional professionals and they understand the work",
+      "source": "./images/ratings/rating4.jpg"
+    }
+  ]
+}
