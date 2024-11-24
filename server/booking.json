@@ -1,14 +1,14 @@
 {
   "reservations": [
     {
-      "id": "6e76",
-      "fullName": "Mykhailo Boiko",
-      "emailAddress": "mihailbojko@gmail.com",
-      "phoneNumber": "3798457",
-      "guestCount": 2,
-      "reservationDate": "2024-11-26",
-      "reservationTime": "12:30",
-      "additionalInfo": "Prepare 2 white towels please"
+      "id": "e3f7",
+      "fullName": "John Doe",
+      "emailAddress": "johndoe@example.com",
+      "phoneNumber": "123456789",
+      "guestCount": 4,
+      "reservationDate": "2024-11-30",
+      "reservationTime": "14:00",
+      "additionalInfo": "Window seat, please"
     }
   ]
 }

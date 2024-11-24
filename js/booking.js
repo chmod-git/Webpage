@@ -28,20 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const response = await fetch("http://localhost:3000/reservations");
         const reservations = await response.json();
 
-        console.log("All reservations:", reservations);
-
         const filteredReservations = reservations.filter(
             reservation => reservation.reservationDate === date
         );
 
-        console.log("Filtered reservations for date:", date, filteredReservations);
-
         const allTimes = ["12:00", "12:30", "13:00", "13:30", "14:00", "14:30"];
-
         const occupiedTimes = filteredReservations.map(reservation => reservation.reservationTime);
 
-        const availableTimes = allTimes.filter(time => !occupiedTimes.includes(time));
-        return availableTimes;
+        return allTimes.filter(time => !occupiedTimes.includes(time));
     }
 
     function populateAvailableTimes(times) {
@@ -99,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     async function checkDuplicateBooking(details) {
-        const response = await fetch(`http://localhost:3000/reservations?date=${details.reservationDate}`);
+        const response = await fetch(`http://localhost:3000/reservations?reservationDate=${details.reservationDate}`);
         const existingReservations = await response.json();
 
         return existingReservations.some(
@@ -120,5 +114,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const result = await response.json();
         console.log("Booking confirmation:", result);
+    }
+
+    async function updateBooking(id, updatedDetails) {
+        try {
+            const response = await fetch(`http://localhost:3000/reservations/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(updatedDetails)
+            });
+
+            const result = await response.json();
+            console.log("Updated booking:", result);
+            alert("Booking updated successfully!");
+        } catch (error) {
+            console.error("Error updating booking:", error);
+            alert("Unable to update the booking. Please try again later.");
+        }
+    }
+
+    async function deleteBooking(id) {
+        try {
+            const response = await fetch(`http://localhost:3000/reservations/${id}`, {
+                method: "DELETE"
+            });
+
+            if (response.ok) {
+                console.log("Booking deleted.");
+                alert("Booking deleted successfully!");
+            } else {
+                alert("Failed to delete the booking. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error deleting booking:", error);
+            alert("Unable to delete the booking. Please try again later.");
+        }
     }
 });
