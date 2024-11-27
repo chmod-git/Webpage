@@ -76,12 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         try {
-            const isDuplicate = await checkDuplicateBooking(bookingDetails);
-            if (isDuplicate) {
-                alert("The selected time on this date is already booked. Please choose another time.");
-                return;
-            }
-
             await saveBooking(bookingDetails);
             alert("Your table has been successfully booked!");
             bookingForm.reset();
@@ -91,17 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Unable to complete the booking. Please try again later.");
         }
     });
-
-    async function checkDuplicateBooking(details) {
-        const response = await fetch(`http://localhost:3000/reservations?reservationDate=${details.reservationDate}`);
-        const existingReservations = await response.json();
-
-        return existingReservations.some(
-            reservation =>
-                reservation.reservationTime === details.reservationTime &&
-                reservation.reservationDate === details.reservationDate
-        );
-    }
 
     async function saveBooking(details) {
         const response = await fetch("http://localhost:3000/reservations", {
