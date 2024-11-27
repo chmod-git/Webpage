@@ -5,19 +5,8 @@ async function fetchReviews() {
 
     reviews.forEach((review, index) => {
         const reviewItem = newPersonReview(review);
-        if (index === 0) {
-            reviewItem.classList.add("active");
-        }
         reviewsData.appendChild(reviewItem);
     });
-
-    renderNavigation(reviews, reviewsNavigation);
-
-    let currentIndex = 0;
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % reviews.length;
-        changeReview(currentIndex);
-    }, 10000);
 }
 
 function newPersonReview(review) {
